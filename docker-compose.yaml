@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  frontend:    
+    image: diplomado/heroes-app
+    ports:
+      - 8080:80
+    depends_on:
+      - backend
+  backend:
+    image: jsonserver
+    ports:
+      - 3333:3333
